@@ -1,0 +1,33 @@
+.form{
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 350px;
+    padding: 10px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    border: 2px solid black;
+    align-items: center;
+}
+.label{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(228, 228, 133);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn:active{
+    background-color: rgb(111, 221, 223);
+}
