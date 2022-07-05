@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { nanoid } from 'nanoid';
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
@@ -37,9 +37,9 @@ const App = () => {
     setContacts(prevState => [contact, ...prevState]);
   }
 
-  function removeContact(id) {
+  const removeContact = useCallback(id => {
     setContacts(prevState => prevState.filter(contact => contact.id !== id));
-  }
+  }, [setContacts]);
 
   const handleFilter = ({ target }) => setFilter(target.value);
 
@@ -67,4 +67,3 @@ const App = () => {
 };
 
 export default App;
-
